@@ -10,14 +10,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class FragmentSecond extends Fragment {
     View view;
     private EditText objA;
     private EditText objB;
-    private TextView resText;
-    private String resultText;
+    public TextView resText;
+    public String resultText;
     Button buttonPlus;
     Button buttonMinus;
     Button buttonUmn;
@@ -27,7 +28,10 @@ public class FragmentSecond extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+
 
     }
 
@@ -35,6 +39,7 @@ public class FragmentSecond extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_second, container, false);
+
         objA=view.findViewById(R.id.inputA);
         objB=view.findViewById(R.id.inputB);
         resText=view.findViewById(R.id.textResult2);
@@ -71,6 +76,7 @@ public class FragmentSecond extends Fragment {
 
         return view;
     }
+
     public void ClickPlus(){
         Integer A=Integer.parseInt(objA.getText().toString());
         Integer B=Integer.parseInt(objB.getText().toString());
@@ -89,4 +95,11 @@ public class FragmentSecond extends Fragment {
         resultText=Integer.toString(A*B);
         resText.setText(resultText);
     }
+    public void onSaveInstanceState(Bundle savedInstanceState){
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("result2",resultText);
+
+
+    }
+
 }
