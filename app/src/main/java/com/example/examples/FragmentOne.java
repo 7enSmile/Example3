@@ -21,7 +21,7 @@ public class FragmentOne extends Fragment {
     private TextView resText;
     private Button buttonRes;
     private int i;
-    private String resultText;
+    public String resultText;
     private Button button;
     View view;
 
@@ -45,9 +45,12 @@ public class FragmentOne extends Fragment {
         objY2=view.findViewById(R.id.inputY2);
         resText=view.findViewById(R.id.textResult);
         buttonRes=view.findViewById(R.id.buttonAccess);
-        if(resultText!=null) {
+        if(resultText!=null){
             resText.setText(resultText);
         }
+
+
+
 
 
         button=view.findViewById(R.id.buttonAccess);
@@ -62,13 +65,7 @@ public class FragmentOne extends Fragment {
         );
         return view;
     }
-    public void onSaveInstanceState(Bundle savedInstanceState){
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putString("result",resultText);
 
-
-
-    }
 
     public void OnClickRes(){
         Double x1=Double.parseDouble(objX1.getText().toString());
@@ -84,6 +81,7 @@ public class FragmentOne extends Fragment {
 
 
     }
+
 
 
 

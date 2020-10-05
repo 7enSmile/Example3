@@ -44,6 +44,9 @@ public class FragmentSecond extends Fragment {
         objB=view.findViewById(R.id.inputB);
         resText=view.findViewById(R.id.textResult2);
         buttonPlus=view.findViewById(R.id.buttonPlus);
+        if(resultText!=null){
+            resText.setText(resultText);
+        }
         buttonPlus.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

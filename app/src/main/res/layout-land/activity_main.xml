@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="81dp">
 
 
-    <fragment
+    <FrameLayout
         android:id="@+id/fragOne"
         android:name="com.example.examples.FragmentOne"
         android:layout_width="350dp"
@@ -16,7 +16,7 @@
 
          />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/fragSecond"
         android:name="com.example.examples.FragmentSecond"
         android:layout_width="350dp"

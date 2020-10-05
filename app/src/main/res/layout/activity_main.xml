@@ -18,7 +18,7 @@
         android:layout_marginTop="4dp"
 
         android:onClick="change"
-        android:text="Button"
+        android:text="Изменить"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
