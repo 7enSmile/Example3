@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     FragmentOne f1=new FragmentOne();
     FragmentSecond f2=new FragmentSecond();
+    FragmentThree f3=new FragmentThree();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void change(View view){
 
-        switch (numberPress % 2) {
+        switch (numberPress % 3) {
             case 1: {
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag,f1,"new").commit();
@@ -67,10 +68,14 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             }
-            case 0: {
+            case 2: {
                 getSupportFragmentManager().beginTransaction().replace(R.id.frag,f2,"second").commit();
 
                 break;
+            }
+            case 0: {
+                getSupportFragmentManager().beginTransaction().replace(R.id.frag,f3,"second").commit();
+
             }
         }
         numberPress++;
